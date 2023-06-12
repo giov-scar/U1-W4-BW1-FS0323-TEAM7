@@ -81,36 +81,46 @@ header img{
 
 .butt  {
     text-align: right;
-    padding-right: 10%;
-    padding-top: 5%;
+    padding-right: 20%;
+    padding-top: 0%;
+    
     
 
 }
 button { background-color: #00FFFF;
     
      border-color: #00FFFF;
-    border-radius: 5%;
-    border-style: dotted;
-    border-width: 35px;
+   padding: 5px 5px;
+    border-width: 15px;
     font-family: 'Outfit', sans-serif; 
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
+    
 
 }
 button:hover{ 
     box-shadow: 4px 2px 20px 1px #00FFFF;
     background-color: #00FFFF;
-    transition: 0.7s;
+    transition: 0.3s;
+   
     
 }
 ul {
     color: white;
     list-style: inside;
     padding-left: 4%;
-    padding-top: 4%;
+    padding-top: 5%;
     
 }
 li{
 padding-top: 1%;
+}
+#inp {
+    font-size: larger;
+    padding-left: 3.5%;
+    padding-top: 4% ;
+    color: white;
+    
+
 }
