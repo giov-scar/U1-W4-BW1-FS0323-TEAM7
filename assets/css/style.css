@@ -7,7 +7,28 @@ body{
     background-size: cover;
 
 }
-
+h1 {
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    font-size: 80px;
+    margin:2% 1 1% 0 ;
+    padding-left: 4%;
+    padding-top: 4%;
+}
+.bolder{
+    font-weight: bolder;
+    padding-top: 0%;
+}
+h3{
+    color: rgb(230, 17, 230);
+    text-align: left;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 2% 0 1% 0;
+    padding-left: 4%;
+    font-weight: bolder;
+}
 h2{
     color: white;
     text-align: center;
@@ -18,9 +39,11 @@ h2{
 
 p{
     color: white;
-    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
+    padding-left: 4%;
 }
 
 header img{
@@ -52,4 +75,21 @@ header img{
     background-color: #00FFFF;
     border: none;
     color: black;
+}
+.butt {
+    box-shadow: 4px 2px 20px 1px #00FFFF;
+    background-color: #00FFFF;
+    border: none;
+    color:#00FFFF; 
+
+}
+ul {
+    color: white;
+    list-style: inside;
+    padding-left: 4%;
+    padding-top: 4%;
+    
+}
+li{
+padding-top: 1%;
 }
