@@ -96,10 +96,14 @@ const questions = [
     },
   ];
   
+
   // funzione per modificare il dom e far apparire a video i quiz
+  //button next
+  let btnNext=document.createElement("button")
+  let answer = 0;
   const bench = function () {
     //inizializzo a 0
-    let answer = 0;
+    
     let quest = questions[answer];
     console.log(quest);
     //creo elemento h1
@@ -128,7 +132,19 @@ const questions = [
       document.getElementById("benchmark").appendChild(radioButton);
       document.getElementById("benchmark").appendChild(label);
     }
+    btnNext.innerText="Next"
+    document.getElementById("benchmark").appendChild(btnNext);
+
   
   };
   bench();
   
+//   const buttonNext=function(){
+//     btnNext.addEventListener("click",function(){
+//         for (let i = 0; i < questions.length; i++) {
+//             answer+[i]
+//             console.log(answer);   
+//         }
+//     })
+//   }
+//   buttonNext()
