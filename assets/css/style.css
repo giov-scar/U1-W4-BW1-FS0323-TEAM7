@@ -53,3 +53,64 @@ header img{
     border: none;
     color: black;
 }
+
+/* Style FEEDBACK */
+
+p {
+    margin: 20px 270px;
+}
+
+.stelle {
+    color: white;
+    text-align: center;
+    margin: 100px;
+}
+
+button {
+    box-shadow: 4px 4px 23px 7px #00FFFF;
+    background-color:#00FFFF;
+    text-align: center;
+    margin: 50px;
+    padding: 20px 50px;
+    font-weight: 900;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+}
+
+hr {
+    text-align: center;
+    margin: 10px 25%;
+    color: #d30fb9;
+    border: 1px solid;
+}
+
+.coment {
+    text-align: center;
+    color: white;
+    margin: 50px;
+}
+
+.inputComent {
+    position: relative;
+    width: 250px;
+    margin: 10px 25%;
+}
+.inputComent input {
+    width: 292%;
+    padding: 0px 27px;
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    margin-top: 36px;
+    outline: none;
+
+}
+.inputComent span {
+    position: absolute;
+    left: 0;
+
+}
