@@ -60,24 +60,7 @@ header img{
 
 }
 
-/*#rating button{
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: white;
-    background-color: transparent;
-    border: 1px solid white;
-    padding: 1% 5%;
-    margin: 0 auto;
-}
 
-#rating button:hover{
-    cursor: pointer;
-    box-shadow: 4px 2px 20px 1px #00FFFF;
-    background-color: #00FFFF;
-    border: none;
-    color: black; 
-} */
 
 .butt  {
     text-align: right;
@@ -185,3 +168,63 @@ hr {
     left: 0;
 
 }
+
+/* RESULT STYLE */
+
+#rating{
+    display: flex;
+    margin: 3% auto;
+    flex-direction: row;
+    justify-content: center;
+    
+
+}
+
+#rating a{
+    text-decoration: none;
+    color: white;
+    
+    
+}
+
+
+#rating button{
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+}
+
+#rating button:hover{
+    cursor: pointer;
+    box-shadow: 0px 3px 25px 5px #00FFFF;
+    transition: 0.7s;
+    background-color: #00FFFF;
+    border: none;
+    color: black;
+}
+
+
+
+#benchmark label {
+    display: inline-block;
+    width: auto;
+    padding: 10px;
+    border: solid 2px #ccc;
+    border-radius:15px ;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  #benchmark input[type="radio"] {
+    display: none;
+  }
+  
+  #benchmark input[type="radio"]:checked + label {
+    border: solid 2px green;
+  }
