@@ -191,6 +191,7 @@ button {
     cursor: pointer;
     color: white;
     margin: 5%;
+    box-shadow: 3px 0px 1px 5px #FFFFFF;
   }
   
   #benchmark input[type="radio"] {
