@@ -18,7 +18,8 @@ h1 {
 }
 .bolder{
     font-weight: bolder;
-    padding-top: 0%;
+    padding-top: 0;
+    font-size: 100px;
 }
 h3{
     color: rgb(230, 17, 230);
@@ -58,7 +59,7 @@ header img{
 
 }
 
-#rating button{
+/*#rating button{
     font-family: 'Outfit', sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
@@ -74,14 +75,33 @@ header img{
     box-shadow: 4px 2px 20px 1px #00FFFF;
     background-color: #00FFFF;
     border: none;
-    color: black;
+    color: black; 
+} */
+
+.butt  {
+    text-align: right;
+    padding-right: 10%;
+    padding-top: 5%;
+    
+
 }
-.butt {
+button { background-color: #00FFFF;
+    
+     border-color: #00FFFF;
+    border-radius: 5%;
+    border-style: dotted;
+    border-width: 35px;
+    font-family: 'Outfit', sans-serif; 
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+button:hover{ 
     box-shadow: 4px 2px 20px 1px #00FFFF;
     background-color: #00FFFF;
-    border: none;
-    color:#00FFFF; 
-
+    transition: 0.7s;
+    
 }
 ul {
     color: white;
