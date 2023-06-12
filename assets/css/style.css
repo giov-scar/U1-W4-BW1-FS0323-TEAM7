@@ -7,7 +7,29 @@ body{
     background-size: cover;
 
 }
-
+h1 {
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    font-size: 80px;
+    margin:2% 1 1% 0 ;
+    padding-left: 4%;
+    padding-top: 4%;
+}
+.bolder{
+    font-weight: bolder;
+    padding-top: 0;
+    font-size: 100px;
+}
+h3{
+    color: rgb(230, 17, 230);
+    text-align: left;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 2% 0 1% 0;
+    padding-left: 4%;
+    font-weight: bolder;
+}
 h2{
     color: white;
     text-align: center;
@@ -18,9 +40,12 @@ h2{
 
 p{
     color: white;
-    text-align: center;
+    font-family: 'Outfit', sans-serif;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
+    padding-left: 4%;
+    padding-top: 0.5%;
+
 }
 
 header img{
@@ -35,7 +60,7 @@ header img{
 
 }
 
-#rating button{
+/*#rating button{
     font-family: 'Outfit', sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
@@ -51,7 +76,53 @@ header img{
     box-shadow: 4px 2px 20px 1px #00FFFF;
     background-color: #00FFFF;
     border: none;
-    color: black;
+    color: black; 
+} */
+
+.butt  {
+    text-align: right;
+    padding-right: 20%;
+    padding-top: 0%;
+    
+    
+
+}
+button { background-color: #00FFFF;
+    
+     border-color: #00FFFF;
+   padding: 5px 5px;
+    border-width: 15px;
+    font-family: 'Outfit', sans-serif; 
+    font-weight: bolder;
+    font-size: 30px;
+    cursor: pointer;
+    
+
+}
+button:hover{ 
+    box-shadow: 4px 2px 20px 1px #00FFFF;
+    background-color: #00FFFF;
+    transition: 0.3s;
+   
+    
+}
+ul {
+    color: white;
+    list-style: inside;
+    padding-left: 4%;
+    padding-top: 5%;
+    
+}
+li{
+padding-top: 1%;
+}
+#inp {
+    font-size: larger;
+    padding-left: 3.5%;
+    padding-top: 4% ;
+    color: white;
+    
+
 }
 
 /* Style FEEDBACK */
