@@ -26,7 +26,7 @@ const startTimer = function(){
 
 
 
-document.getElementById('benchmark').innerHTML= `...`
+document.getElementById('timer').innerHTML= `...`
 startTimer()
 
 
