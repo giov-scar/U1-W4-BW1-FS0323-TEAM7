@@ -97,18 +97,20 @@ li {
 
 
 #pfeedback p {
-    margin: 20px 270px;
+    margin: 20px 25%;
     color: white;
     text-align: center;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
 }
 
 .container4 {
     text-align: center;
-    text-align: center;
-    margin: 62px 0px;
+    align-items: center;
+    margin: 0px 26% 103px;
+    padding: 42px 11px;
 }
+
 .container4 .rating input {
     display: none;
 }
@@ -118,6 +120,7 @@ li {
     color: #100c31;
     margin: 5px;
     transition: all 0.2s ease;
+   float: right;
 }
 input:not(:checked) ~ label:hover,
 input:not(:checked) ~ label:hover ~ label{
@@ -126,6 +129,9 @@ input:not(:checked) ~ label:hover ~ label{
 input:checked ~ label{
     color: rgb(0, 255, 255);
 } 
+input#rate-9:checked ~ label {
+    color: rgb(0, 255, 255);
+}
 
 
 
@@ -260,6 +266,7 @@ hr {
   background: transparent;
   margin-top: 36px;
   outline: none;
+  color: #d30fb9;
 }
 .inputComent span {
   position: absolute;
