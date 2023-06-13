@@ -123,13 +123,15 @@ padding-top: 1%;
 
 .container4 {
     text-align: center;
+    text-align: center;
+    margin: 62px 0px;
 }
 .container4 .rating input {
     display: none;
 }
 
 .rating label {
-    font-size: 40px;
+    font-size: 70px;
 }
 
 /*.rating {
