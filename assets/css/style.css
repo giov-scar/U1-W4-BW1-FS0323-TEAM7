@@ -83,20 +83,22 @@ header img{
     text-align: right;
     padding-right: 25%;
     padding-top: 0%;
+
     
     
 
 }
-button { background-color: #00FFFF;
-    
+button {
+     background-color: #00FFFF;
      border-color: #00FFFF;
-   padding: 3px 3px 3px 3px;
-    border-width: 15px;
+   padding: 10px 10px;
+    border-width: 20px;
     font-family: 'Outfit', sans-serif; 
     font-weight: bold; 
     font-size: 30px;
     cursor: pointer;
     box-shadow: 4px 4px 40px 4px #00FFFF;
+    border:none
 
 }
 
