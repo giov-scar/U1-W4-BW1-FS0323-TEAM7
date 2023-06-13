@@ -240,9 +240,9 @@ li {
     width: 20px;
 }
 
-/* #benchmark input[type="radio"] {
+#benchmark input[type="radio"] {
   display: none;
-} */
+}
 
 #benchmark input[type="radio"]:checked + label {
   border: solid 2px green;

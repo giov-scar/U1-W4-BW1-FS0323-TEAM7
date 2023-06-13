@@ -95,6 +95,9 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
+window.onload = function () {
+  bench();
+};
 
 // funzione per modificare il dom e far apparire a video i quiz
 //button next
@@ -102,8 +105,28 @@ let btnNext = document.createElement("button");
 //inizializzo a 0 l'array
 let questionNumber = 0;
 
+let untentPoints = 0;
+const point = function () {
+  const quest = questions[questionNumber];
+
+  const answerConteiner = document.querySelectorAll("label");
+  answerConteiner.forEach((el) => {
+    el.addEventListener("click", function (e) {
+      e.innerHTML;
+      if (el.innerText === quest.correct_answer) {
+        console.log(el);
+        untentPoints += 10;
+      }
+      console.log(el);
+      console.log("point", untentPoints);
+    });
+    console.log(untentPoints);
+  });
+};
+
 const bench = function () {
   const quest = questions[questionNumber];
+
   console.log(quest);
   //creo elementi con innerHTML
   const divCont = document.getElementById("benchmark");
@@ -121,32 +144,19 @@ const bench = function () {
   //creo il bottone next
   btnNext.innerHTML = "Next";
   document.getElementById("benchmark").appendChild(btnNext);
+  point()
 };
-bench();
 
 const next = function () {
   //richiamo sul click il bottone e aumento di 1 l'array
   btnNext.addEventListener("click", function () {
-    bench();
-    checkedAn();
-
-    // if(btnNext.addEventListener){
-    //   startTimer()
-    // }
     questionNumber++;
-
-    console.log("indice array", questionNumber);
+    bench();
+    console.log(questionNumber);
   });
 };
 next();
 
-let untentPoints = 0;
-const quest = questions[questionNumber];
-const checkedAn = function () {
-  let answerConteiner = document.querySelector("input:checked");
-  console.log(answerConteiner);
-  if (answerConteiner === quest.correct_answer) {
-    console.log(answerConteiner);
-    untentPoints++;
-  }
-};
+const result=function(){
+  const pageResult=document.
+}
