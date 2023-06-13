@@ -71,7 +71,7 @@ header img {
 .butt {
   text-align: right;
   padding-right: 20%;
-  padding-bottom: 10%;
+  padding-bottom: 20%;
 }
 button {
   background-color: #00ffff;
@@ -83,6 +83,7 @@ button {
   font-size: 30px;
   cursor: pointer;
   border: none;
+  box-shadow:  2px 6px 30px 6px #00ffff;
   
 }
 button:hover {
