@@ -18,7 +18,7 @@ h1 {
 .bolder {
   font-weight: bolder;
   padding-top: 0;
-  font-size: 100px;
+  font-size: 85px;
 }
 h3 {
   color: rgb(230, 17, 230);
@@ -37,12 +37,13 @@ h2 {
   margin: 2% 0 1% 0;
 }
 
-p {
+/*p {
   color: white;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-}
+} */
+
 
 /* HEADER */
 
@@ -52,6 +53,16 @@ header img {
 }
 
 /* MAIN */
+.p2{
+    color: white;
+    padding-left: 4%;
+    
+}
+.p3{
+    color: white;
+    padding-left: 4%;
+    padding-top: 0.5%;
+}
 #rating {
   display: flex;
   margin: 3% auto;
@@ -60,7 +71,7 @@ header img {
 .butt {
   text-align: right;
   padding-right: 20%;
-  padding-top: 0%;
+  padding-bottom: 20%;
 }
 button {
   background-color: #00ffff;
@@ -71,29 +82,33 @@ button {
   font-weight: bolder;
   font-size: 30px;
   cursor: pointer;
+  border: none;
+  box-shadow:  2px 6px 30px 6px #00ffff;
+  
 }
-/* button:hover {
+button:hover {
   box-shadow: 4px 2px 20px 1px #00ffff;
   background-color: #00ffff;
   transition: 0.3s;
-} */
+}
 ul {
   color: white;
   list-style: inside;
-  padding-left: 4%;
-  padding-top: 5%;
+  padding-left: 5%;
+  padding-top: 4%;
 }
 li {
   padding-top: 1%;
 }
 #inp {
   font-size: larger;
-  padding-left: 3.5%;
-  padding-top: 4%;
+  padding-right: 67%;
+  padding-top: 6%;
   color: white;
 }
 
 /* Style FEEDBACK */
+
 
 
 #pfeedback p {
@@ -110,17 +125,35 @@ li {
     margin: 0px 26% 103px;
     padding: 42px 11px;
 }
+.pfeedback {
+  margin: 20px 270px;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.container4 {
+  text-align: center;
+  text-align: center;
+  margin: 62px 0px;
+
+}
 
 .container4 .rating input {
-    display: none;
+  display: none;
 }
 
 .rating label {
+
     font-size: 70px;
     color: #100c31;
     margin: 5px;
     transition: all 0.2s ease;
    float: right;
+
+  font-size: 70px;
+>>>>>>> main
 }
 input:not(:checked) ~ label:hover,
 input:not(:checked) ~ label:hover ~ label{
@@ -150,16 +183,28 @@ input#rate-9:checked ~ label {
     padding: 0px 5px;
 }*/
 
-button {
-    box-shadow: 4px 4px 23px 7px #00FFFF;
-    background-color:#00FFFF;
-    text-align: center;
-    margin: 50px;
-    padding: 20px 50px;
-    font-weight: 900;
-    font-size: 21px;
-    cursor: pointer;
+/* button {
+  box-shadow: 4px 4px 23px 7px #00ffff;
+  background-color: #00ffff;
+  text-align: center;
+  margin: 50px;
+  padding: 20px 50px;
+  font-weight: 900;
+  font-size: 21px;
+  cursor: pointer;
+} */
+
+
+/*p {
+  margin: 20px 270px;
+}*/
+
+.stelle {
+  color: white;
+  text-align: center;
+  margin: 100px;
 }
+
 
 /* button {
   box-shadow: 4px 4px 23px 7px #00ffff;
@@ -181,9 +226,9 @@ button {
   justify-content: center;
 }
 
-#outcome p{
-    text-align: center;
-    margin: 0;
+#outcome p {
+  text-align: center;
+  margin: 0;
 }
 
 #rating a {
@@ -201,6 +246,7 @@ button {
   margin: 0 auto;
   width: 200px;
   height: 50px;
+  
 }
 
 #rating button:hover {
@@ -213,6 +259,11 @@ button {
 }
 
 /* STILE BOTTONI */
+#benchmark{
+  width: 80%;
+  margin: 0 auto;
+}
+
 #benchmark label {
   display: inline-block;
   width: auto;
@@ -275,10 +326,10 @@ hr {
 
 /* Clock */
 .base-timer {
-    position: relative;
-    height: 300px;
-    width: 300px;
-  }
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
 
   .base-timer__circle {
     fill: none;
@@ -297,4 +348,19 @@ hr {
     align-items: center;
     justify-content: center;
     font-size: 48px;
+  }
+  /* timer color change,   deve avere la stessa forma di Clock*/
+  .base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    stroke: green;
+    stroke-dasharray: 142 283;
+  }
+  
+  .base-timer__svg {
+    
+    transform: scaleX(-1);
   }
