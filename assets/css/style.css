@@ -153,7 +153,7 @@ li {
    float: right;
 
   font-size: 70px;
->>>>>>> main
+
 }
 input:not(:checked) ~ label:hover,
 input:not(:checked) ~ label:hover ~ label{
