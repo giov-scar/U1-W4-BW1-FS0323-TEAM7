@@ -72,11 +72,11 @@ button {
   font-size: 30px;
   cursor: pointer;
 }
-/* button:hover {
+button:hover {
   box-shadow: 4px 2px 20px 1px #00ffff;
   background-color: #00ffff;
   transition: 0.3s;
-} */
+}
 ul {
   color: white;
   list-style: inside;
@@ -92,29 +92,28 @@ li {
   padding-top: 4%;
   color: white;
 }
-x
+
 /* Style FEEDBACK */
 
-
 .pfeedback {
-    margin: 20px 270px;
-    color: white;
-    text-align: center;
-    font-weight: 400;
-    font-size: 1.5rem;
+  margin: 20px 270px;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 .container4 {
-    text-align: center;
-    text-align: center;
-    margin: 62px 0px;
+  text-align: center;
+  text-align: center;
+  margin: 62px 0px;
 }
 .container4 .rating input {
-    display: none;
+  display: none;
 }
 
 .rating label {
-    font-size: 70px;
+  font-size: 70px;
 }
 
 /*.rating {
@@ -131,16 +130,16 @@ x
     padding: 0px 5px;
 }*/
 
-button {
-    box-shadow: 4px 4px 23px 7px #00FFFF;
-    background-color:#00FFFF;
-    text-align: center;
-    margin: 50px;
-    padding: 20px 50px;
-    font-weight: 900;
-    font-size: 21px;
-    cursor: pointer;
-}
+/* button {
+  box-shadow: 4px 4px 23px 7px #00ffff;
+  background-color: #00ffff;
+  text-align: center;
+  margin: 50px;
+  padding: 20px 50px;
+  font-weight: 900;
+  font-size: 21px;
+  cursor: pointer;
+} */
 
 p {
   margin: 20px 270px;
@@ -172,9 +171,9 @@ p {
   justify-content: center;
 }
 
-#outcome p{
-    text-align: center;
-    margin: 0;
+#outcome p {
+  text-align: center;
+  margin: 0;
 }
 
 #rating a {
@@ -265,26 +264,26 @@ hr {
 
 /* Clock */
 .base-timer {
-    position: relative;
-    height: 300px;
-    width: 300px;
-  }
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
 
-  .base-timer__circle {
-    fill: none;
-    stroke: none;
-  }
-  .base-timer__path-elapsed {
-    stroke-width: 7px;
-    stroke: grey;
-  }
-  .base-timer__label {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
-  }
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
