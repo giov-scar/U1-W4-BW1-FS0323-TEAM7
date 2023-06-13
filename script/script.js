@@ -110,7 +110,7 @@ const bench = function () {
   //creo h2
   divCont.innerHTML = `<h2>${quest.question}</h2>
   ${quest.incorrect_answers.map((incorrect) =>
-    `<input type="radio" name="x" value="${incorrect}">
+    `<div class='answer'><input type="radio" name="x" value="${incorrect}"></div>
     <label>${incorrect}</label>`
    )}
 <input type="radio" name="x" value="${quest.correct_answer}">
