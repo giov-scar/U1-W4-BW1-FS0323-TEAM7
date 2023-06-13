@@ -135,13 +135,6 @@ li {
   font-size: 1.5rem;
 }
 
-.container4 {
-  text-align: center;
-  text-align: center;
-  margin: 62px 0px;
-
-}
-
 .container4 .rating input {
   display: none;
 }
@@ -168,13 +161,6 @@ input#rate-9:checked ~ label {
     color: rgb(0, 255, 255);
 }
 
-
-
-.stelle {
-  color: white;
-  text-align: center;
-  margin: 100px;
-}
 
 
 /* RESULT STYLE */
