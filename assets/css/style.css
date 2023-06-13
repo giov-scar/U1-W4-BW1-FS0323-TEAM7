@@ -37,12 +37,12 @@ h2 {
   margin: 2% 0 1% 0;
 }
 
-/*p {
+p {
   color: white;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-} */
+}
 
 
 /* HEADER */
@@ -73,23 +73,25 @@ header img {
   padding-right: 20%;
   padding-bottom: 20%;
 }
-button {
-  background-color: #00ffff;
-  border-color: #00ffff;
-  padding: 5px 5px;
-  border-width: 15px;
+ button {
   font-family: "Outfit", sans-serif;
-  font-weight: bolder;
-  font-size: 30px;
-  cursor: pointer;
-  border: none;
-  box-shadow:  2px 6px 30px 6px #00ffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
   
-}
+} 
 button:hover {
-  box-shadow: 4px 2px 20px 1px #00ffff;
+  cursor: pointer;
+  box-shadow: 0px 3px 25px 5px #00ffff;
+  transition: 0.7s;
   background-color: #00ffff;
-  transition: 0.3s;
+  border: none;
+  color: black;
 }
 ul {
   color: white;
@@ -168,54 +170,12 @@ input#rate-9:checked ~ label {
 
 
 
-
-/*.rating {
-    margin: 54px 24%;
-    text-align: center;
-}
-
-.rating .fas {
-    font-size:  40px;
-    color: rgb(0, 255, 255);
-    cursor: pointer;
-    text-align: center;
-    font-size: 65px;
-    padding: 0px 5px;
-}*/
-
-/* button {
-  box-shadow: 4px 4px 23px 7px #00ffff;
-  background-color: #00ffff;
-  text-align: center;
-  margin: 50px;
-  padding: 20px 50px;
-  font-weight: 900;
-  font-size: 21px;
-  cursor: pointer;
-} */
-
-
-/*p {
-  margin: 20px 270px;
-}*/
-
 .stelle {
   color: white;
   text-align: center;
   margin: 100px;
 }
 
-
-/* button {
-  box-shadow: 4px 4px 23px 7px #00ffff;
-  background-color: #00ffff;
-  text-align: center;
-  margin: 50px;
-  padding: 20px 50px;
-  font-weight: 900;
-  font-size: 21px;
-  cursor: pointer;
-} */
 
 /* RESULT STYLE */
 
