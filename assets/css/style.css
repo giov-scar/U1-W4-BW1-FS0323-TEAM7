@@ -81,7 +81,7 @@ header img{
 
 .butt  {
     text-align: right;
-    padding-right: 20%;
+    padding-right: 25%;
     padding-top: 0%;
     
     
@@ -90,23 +90,18 @@ header img{
 button { background-color: #00FFFF;
     
      border-color: #00FFFF;
-   padding: 5px 5px;
+   padding: 3px 3px 3px 3px;
     border-width: 15px;
     font-family: 'Outfit', sans-serif; 
-    font-weight: bolder;
+    font-weight: bold; 
     font-size: 30px;
     cursor: pointer;
-    
+    box-shadow: 4px 4px 40px 4px #00FFFF;
 
 }
-button:hover{ 
-    box-shadow: 4px 2px 20px 1px #00FFFF;
-    background-color: #00FFFF;
-    transition: 0.7s;
+
    
-    
-}
-ul {
+    ul {
     color: white;
     list-style: inside;
     padding-left: 5%;
@@ -119,7 +114,7 @@ padding-top: 1%;
 #inp {
     font-size: larger;
     padding-left: 4%;
-    padding-top: 4% ;
+    padding-top: 5% ;
     color: white;
     
 
