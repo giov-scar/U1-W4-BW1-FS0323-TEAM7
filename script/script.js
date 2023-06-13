@@ -100,35 +100,53 @@ const questions = [
 //button next
 let btnNext = document.createElement("button");
 //inizializzo a 0 l'array
-let answer = 0;
+let questionNumber = 0;
 
 const bench = function () {
-  const quest = questions[answer];
+  const quest = questions[questionNumber];
   console.log(quest);
   //creo elementi con innerHTML
   const divCont = document.getElementById("benchmark");
   //creo h2
   divCont.innerHTML = `<h2>${quest.question}</h2>
-  ${quest.incorrect_answers.map((incorrect) =>
-    `<input type="radio" name="x" value="${incorrect}">
+  ${quest.incorrect_answers.map(
+    (incorrect) =>
+      `<input class="pd" type="radio" name="x" value="${incorrect}">
     <label>${incorrect}</label>`
-   )}
-<input type="radio" name="x" value="${quest.correct_answer}">
+  )}
+<input class="pd" type="radio" name="x" value="${quest.correct_answer}">
 <label>${quest.correct_answer}</label>
-`
-console.log(divCont);
-//creo il bottone next
+`;
+  console.log(divCont);
+  //creo il bottone next
   btnNext.innerHTML = "Next";
   document.getElementById("benchmark").appendChild(btnNext);
 };
 bench();
 
-const next=function(){
+const next = function () {
   //richiamo sul click il bottone e aumento di 1 l'array
-  btnNext.addEventListener("click",function(){
-    answer++ 
-    bench()
-    console.log(answer);
-  })
-}
-next()
+  btnNext.addEventListener("click", function () {
+    bench();
+    checkedAn();
+
+    // if(btnNext.addEventListener){
+    //   startTimer()
+    // }
+    questionNumber++;
+
+    console.log("indice array", questionNumber);
+  });
+};
+next();
+
+let untentPoints = 0;
+const quest = questions[questionNumber];
+const checkedAn = function () {
+  let answerConteiner = document.querySelector("input:checked");
+  console.log(answerConteiner);
+  if (answerConteiner === quest.correct_answer) {
+    console.log(answerConteiner);
+    untentPoints++;
+  }
+};

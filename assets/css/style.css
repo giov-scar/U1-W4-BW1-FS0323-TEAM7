@@ -236,9 +236,13 @@ li {
   box-shadow: 3px 0px 1px 5px #ffffff;
 }
 
-#benchmark input[type="radio"] {
-  display: none;
+.pd{
+    width: 20px;
 }
+
+/* #benchmark input[type="radio"] {
+  display: none;
+} */
 
 #benchmark input[type="radio"]:checked + label {
   border: solid 2px green;
