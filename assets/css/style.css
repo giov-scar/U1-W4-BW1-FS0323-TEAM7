@@ -218,6 +218,11 @@ li {
 }
 
 /* STILE BOTTONI */
+#benchmark{
+  width: 80%;
+  margin: 0 auto;
+}
+
 #benchmark label {
   display: inline-block;
   width: auto;
