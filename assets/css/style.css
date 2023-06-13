@@ -92,11 +92,11 @@ li {
   padding-top: 4%;
   color: white;
 }
-x
+
 /* Style FEEDBACK */
 
 
-.pfeedback {
+#pfeedback p {
     margin: 20px 270px;
     color: white;
     text-align: center;
@@ -115,7 +115,20 @@ x
 
 .rating label {
     font-size: 70px;
+    color: #100c31;
+    margin: 5px;
+    transition: all 0.2s ease;
 }
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+    color: rgb(0, 255, 255);
+}
+input:checked ~ label{
+    color: rgb(0, 255, 255);
+} 
+
+
+
 
 /*.rating {
     margin: 54px 24%;
@@ -140,16 +153,6 @@ button {
     font-weight: 900;
     font-size: 21px;
     cursor: pointer;
-}
-
-p {
-  margin: 20px 270px;
-}
-
-.stelle {
-  color: white;
-  text-align: center;
-  margin: 100px;
 }
 
 /* button {
