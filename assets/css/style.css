@@ -113,15 +113,38 @@ padding-top: 1%;
 
 /* Style FEEDBACK */
 
-p {
+.pfeedback {
     margin: 20px 270px;
-}
-
-.stelle {
     color: white;
     text-align: center;
-    margin: 100px;
+    font-weight: 400;
+    font-size: 1.5rem;
 }
+
+.container4 {
+    text-align: center;
+}
+.container4 .rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 40px;
+}
+
+/*.rating {
+    margin: 54px 24%;
+    text-align: center;
+}
+
+.rating .fas {
+    font-size:  40px;
+    color: rgb(0, 255, 255);
+    cursor: pointer;
+    text-align: center;
+    font-size: 65px;
+    padding: 0px 5px;
+}*/
 
 button {
     box-shadow: 4px 4px 23px 7px #00FFFF;
@@ -175,9 +198,6 @@ button {
 }
 
 /* STILE BOTTONI */
-#benchmark{
-    
-}
 
 
 
