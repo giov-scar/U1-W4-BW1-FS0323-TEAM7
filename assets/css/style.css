@@ -1,123 +1,218 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
-
-body{
-    font-family: 'Outfit', sans-serif;
-    background-image: url(../img/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap");
+/* GENERAL SETTING */
+body {
+  font-family: "Outfit", sans-serif;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 h1 {
-    color: white;
-    font-weight: 600;
-    text-align: left;
-    font-size: 80px;
-    margin:2% 1 1% 0 ;
-    padding-left: 4%;
-    padding-top: 4%;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  font-size: 80px;
+  margin: 2% 1 1% 0;
+  padding-left: 4%;
+  padding-top: 4%;
 }
-.bolder{
-    font-weight: bolder;
-    padding-top: 0;
-    font-size: 88px;
+.bolder {
+  font-weight: bolder;
+  padding-top: 0;
+  font-size: 100px;
 }
-h3{
-    color: rgb(230, 17, 230);
-    text-align: left;
-    font-weight: 400;
-    font-size: 2rem;
-    margin: 2% 0 1% 0;
-    padding-left: 4%;
-    font-weight: bolder;
+h3 {
+  color: rgb(230, 17, 230);
+  text-align: left;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 2% 0 1% 0;
+  padding-left: 4%;
+  font-weight: bolder;
 }
-h2{
-    color: white;
-    text-align: center;
-    font-weight: 600;
-    font-size: 3rem;
-    margin: 2% 0 1% 0;
-}
-
-p{
-    color: white;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 400;
-    font-size: 1.0rem;
-    padding-left: 4%;
-    padding-top: 0.5%;
-
+h2 {
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 2% 0 1% 0;
 }
 
-header img{
-    width: 15%;
-    margin: 3% 0 0 5%;
-    
+p {
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
-#rating{
-    display: flex;
-    margin: 3% auto;
+/* HEADER */
 
+header img {
+  width: 15%;
+  margin: 3% 0 0 5%;
 }
 
-/*#rating button{
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: white;
-    background-color: transparent;
-    border: 1px solid white;
-    padding: 1% 5%;
-    margin: 0 auto;
+/* MAIN */
+#rating {
+  display: flex;
+  margin: 3% auto;
 }
 
-#rating button:hover{
-    cursor: pointer;
-    box-shadow: 4px 2px 20px 1px #00FFFF;
-    background-color: #00FFFF;
-    border: none;
-    color: black; 
-} */
-
-.butt  {
-    text-align: right;
-    padding-right: 25%;
-    padding-top: 0%;
-
-    
-    
-
+.butt {
+  text-align: right;
+  padding-right: 20%;
+  padding-top: 0%;
 }
 button {
-     background-color: #00FFFF;
-     border-color: #00FFFF;
-   padding: 10px 10px;
-    border-width: 20px;
-    font-family: 'Outfit', sans-serif; 
-    font-weight: bold; 
-    font-size: 30px;
-    cursor: pointer;
-    box-shadow: 4px 4px 40px 4px #00FFFF;
-    border:none
-
+  background-color: #00ffff;
+  border-color: #00ffff;
+  padding: 5px 5px;
+  border-width: 15px;
+  font-family: "Outfit", sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  cursor: pointer;
 }
-
-   
-    ul {
-    color: white;
-    list-style: inside;
-    padding-left: 5%;
-    padding-top: 4%;
-    
+/* button:hover {
+  box-shadow: 4px 2px 20px 1px #00ffff;
+  background-color: #00ffff;
+  transition: 0.3s;
+} */
+ul {
+  color: white;
+  list-style: inside;
+  padding-left: 4%;
+  padding-top: 5%;
 }
-li{
-padding-top: 1%;
+li {
+  padding-top: 1%;
 }
 #inp {
-    font-size: larger;
-    padding-left: 4%;
-    padding-top: 5% ;
-    color: white;
-    
+  font-size: larger;
+  padding-left: 3.5%;
+  padding-top: 4%;
+  color: white;
+}
+x
+/* Style FEEDBACK */
 
+p {
+  margin: 20px 270px;
+}
+
+.stelle {
+  color: white;
+  text-align: center;
+  margin: 100px;
+}
+
+/* button {
+  box-shadow: 4px 4px 23px 7px #00ffff;
+  background-color: #00ffff;
+  text-align: center;
+  margin: 50px;
+  padding: 20px 50px;
+  font-weight: 900;
+  font-size: 21px;
+  cursor: pointer;
+} */
+
+/* RESULT STYLE */
+
+#rating {
+  display: flex;
+  margin: 3% auto;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#outcome p{
+    text-align: center;
+    margin: 0;
+}
+
+#rating a {
+  text-decoration: none;
+  color: white;
+}
+
+#rating button {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+}
+
+#rating button:hover {
+  cursor: pointer;
+  box-shadow: 0px 3px 25px 5px #00ffff;
+  transition: 0.7s;
+  background-color: #00ffff;
+  border: none;
+  color: black;
+}
+
+/* STILE BOTTONI */
+
+#benchmark label {
+  display: inline-block;
+  width: auto;
+  padding: 10px;
+  border: solid 2px #ccc;
+  border-radius: 15px;
+  transition: all 0.3s;
+  cursor: pointer;
+  color: white;
+  margin: 5%;
+  box-shadow: 3px 0px 1px 5px #ffffff;
+}
+
+#benchmark input[type="radio"] {
+  display: none;
+}
+
+#benchmark input[type="radio"]:checked + label {
+  border: solid 2px green;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+}
+
+hr {
+  text-align: center;
+  margin: 10px 25%;
+  color: #d30fb9;
+  border: 1px solid;
+}
+
+.coment {
+  text-align: center;
+  color: white;
+  margin: 50px;
+}
+
+.inputComent {
+  position: relative;
+  width: 250px;
+  margin: 10px 25%;
+}
+.inputComent input {
+  width: 292%;
+  padding: 0px 27px;
+  font-size: 18px;
+  border: none;
+  background: transparent;
+  margin-top: 36px;
+  outline: none;
+}
+.inputComent span {
+  position: absolute;
+  left: 0;
 }
