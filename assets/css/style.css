@@ -218,7 +218,7 @@ input#rate-9:checked ~ label {
   color: black;
 }
 
-/* STILE BOTTONI */
+/* STILE BOTTONI RISPOSTE */
 #benchmark{
   width: 80%;
   margin: 0 auto;
@@ -227,14 +227,26 @@ input#rate-9:checked ~ label {
 #benchmark label {
   display: inline-block;
   width: auto;
-  padding: 10px;
-  border: solid 2px #ccc;
-  border-radius: 15px;
-  transition: all 0.3s;
+  padding: 20px 40px;
   cursor: pointer;
   color: white;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 50px;
+  border-image: linear-gradient(180deg, #d20094,#900080) 10;
+  
+  
+  padding: 10px 20px;
   margin: 5%;
-  box-shadow: 3px 0px 1px 5px #ffffff;
+}
+
+#benchmark label:hover{
+  
+  background-color: transparent;
+  background: linear-gradient(transparent, transparent) padding-box,
+    linear-gradient(180deg, #d20094,#900080) border-box;
+  border: 2px solid transparent;
+  border-radius: 50px;
 }
 
 #benchmark input[type="radio"] {
