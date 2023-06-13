@@ -8,27 +8,32 @@ const formatTimeLeft = function(time){
     return `${minutes}:${seconds}`
 }
 
-const TIME_LIMIT = 20
+const TIME_LIMIT = 5
 let timePassed = 0
 let timeLeft = TIME_LIMIT
 
 
 let timerInterval = null;
 
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
 
 const startTimer = function(){
     timerInterval= setInterval(() =>{
         timePassed = timePassed += 1;
         timeLeft = TIME_LIMIT - timePassed;
         document.getElementById('base-timer-label').innerHTML = formatTimeLeft(timeLeft)
+        if (timeLeft === 0) {
+          onTimesUp();}
     }, 1000 )
+   
 }
 
 
 
 document.getElementById('timer').innerHTML= `...`
 startTimer()
-
 
 
 const COLOR_CODE = {

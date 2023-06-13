@@ -107,16 +107,15 @@ const bench = function () {
   console.log(quest);
   //creo elementi con innerHTML
   const divCont = document.getElementById("benchmark");
-  //creo h1
-  divCont.innerHTML = `<h1>${quest.question}</h1>
-  ${quest.incorrect_answers}
+  //creo h2
+  divCont.innerHTML = `<h2>${quest.question}</h2>
+  ${quest.incorrect_answers.map((incorrect) =>
+    `<input type="radio" name="x" value="${incorrect}">
+    <label>${incorrect}</label>`
+   )}
 <input type="radio" name="x" value="${quest.correct_answer}">
 <label>${quest.correct_answer}</label>
 `
-
-
-
-;
 console.log(divCont);
 //creo il bottone next
   btnNext.innerHTML = "Next";
@@ -127,7 +126,7 @@ bench();
 const next=function(){
   //richiamo sul click il bottone e aumento di 1 l'array
   btnNext.addEventListener("click",function(){
-    answer+++
+    answer++ 
     bench()
     console.log(answer);
   })
