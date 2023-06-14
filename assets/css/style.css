@@ -146,8 +146,7 @@ li {
     margin: 5px;
     transition: all 0.2s ease;
    float: right;
-
-  font-size: 70px;
+  font-size: 40px;
 
 }
 input:not(:checked) ~ label:hover,
