@@ -162,9 +162,7 @@ const next = function () {
   //richiamo sul click il bottone e aumento di 1 l'array
   btnNext.addEventListener("click", function () {
     questionNumber++;
-    onTimesUp()
-    resetTime()
-    startTimer()
+    resetTimer()
     
   
     if (questionNumber<questions.length) {

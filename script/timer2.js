@@ -1,97 +1,22 @@
-const FULL_DASH_ARRAY = 283;
-const WARNING_THRESHOLD = 10;
-const ALERT_THRESHOLD = 5;
-
-const COLOR_CODES = {
-  info: {
-    color: "green"
-  },
-  warning: {
-    color: "orange",
-    threshold: WARNING_THRESHOLD
-  },
-  alert: {
-    color: "red",
-    threshold: ALERT_THRESHOLD
-  }
-};
-let remainingPathColor = COLOR_CODES.info.color;
-
- 
-document.getElementById("timer").innerHTML = `
-<div class="base-timer">
-  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <g class="base-timer__circle">
-      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
-      <path
-        id="base-timer-path-remaining"
-        stroke-dasharray="283"
-        class="base-timer__path-remaining ${remainingPathColor}"
-        d="
-          M 50, 50
-          m -45, 0
-          a 45,45 0 1,0 90,0
-          a 45,45 0 1,0 -90,0
-        "
-      ></path>
-    </g>
-  </svg>
-  <span id="base-timer-label" class="base-timer__label"></span>
-</div>
-`;
-
-
-
-let time = 1 * 60; //minutes * 60 seconds
+let time = 60; //minutes * 60 seconds
 let refreshIntervalId = setInterval(updateCountdown, 1000); //update every 1 second
-
+const contdownEl = document.getElementById("sec"); 
+let ss = document.getElementById('ss')
 function updateCountdown() {
-    const minutes = Math.floor(time / 60); // rounds a number DOWN to the nearest integer
-    let seconds = time % 60;
+    
+    let seconds = time ;
 
     seconds = seconds < 10 ? '0' + seconds : seconds; 
-    const contdownEl = document.getElementById("base-timer-label"); 
-    contdownEl.innerHTML = `${minutes}:${seconds}`;
+    
+    contdownEl.innerHTML = `<p>SECONDS</P> ${seconds}<p>REMAINING</P>`;
 
     time--;
-    setCircleDasharray();
-    setRemainingPathColor(time);
-
+    ss.style.strokeDashoffset = 450*time/60
     if (time === 0) {
-        time = 1 * 60
+        time = 60
     }
 }
 
-function setRemainingPathColor(time) {
-  const { alert, warning, info } = COLOR_CODES;
-  if (time <= alert.threshold) {
-    document
-      .getElementById("base-timer-path-remaining")
-      .classList.remove(warning.color);
-    document
-      .getElementById("base-timer-path-remaining")
-      .classList.add(alert.color);
-  } else if (time <= warning.threshold) {
-    document
-      .getElementById("base-timer-path-remaining")
-      .classList.remove(info.color);
-    document
-      .getElementById("base-timer-path-remaining")
-      .classList.add(warning.color);
-  }
+const resetTimer = function(){
+  time = 60
 }
-
-function calculateTimeFraction() {
-  const rawTimeFraction = time / TIME_LIMIT;
-  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
-}
-
-function setCircleDasharray() {
-  const circleDasharray = `${(
-    calculateTimeFraction() * FULL_DASH_ARRAY
-  ).toFixed(0)} 283`;
-  document
-    .getElementById("base-timer-path-remaining")
-    .setAttribute("stroke-dasharray", circleDasharray);
-}
-
