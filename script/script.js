@@ -115,7 +115,9 @@ const point = function () {
   const answerConteiner = document.querySelectorAll("label");
   answerConteiner.forEach((el) => {
     el.addEventListener("click", function (e) {
-      e.innerHTML;
+      // e.innerHTML;
+      el.classList.add("sel")
+      console.log("check",el);
       if (el.innerText === quest.correct_answer) {
         console.log(el);
         untentPoints += 10;
