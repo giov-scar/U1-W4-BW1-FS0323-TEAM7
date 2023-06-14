@@ -74,9 +74,10 @@ header img {
 
 .butt {
   text-align: right;
-  padding-right: 20%;
-  padding-bottom: 20%;
+  /* padding-right:300px; */
+  margin-left: 20%;
 }
+
  button {
   font-family: "Outfit", sans-serif;
   font-size: 1.2rem;
@@ -87,14 +88,20 @@ header img {
   margin: 0 auto;
   width: 200px;
   height: 50px;
-  
 } 
+button a{
+  text-decoration: none;
+  color: white;
+}
 button:hover {
   cursor: pointer;
   box-shadow: 0px 3px 25px 5px #00ffff;
   transition: 0.7s;
   background-color: #00ffff;
   border: none;
+  color: black;
+}
+button a:hover{
   color: black;
 }
 ul {
@@ -163,6 +170,14 @@ li {
 .checkbox-wrapper input:checked ~ .checkmark::after {
   display: block;
 }
+  width: 90%;
+  font-size: 1.1em;
+    /* padding-right: 51%; */
+    /* padding-top: 3em; */
+    color: white;
+    margin-top: 3%;
+  margin-left: 4.5%;}
+
 /* Style FEEDBACK */
 
 
@@ -264,6 +279,7 @@ input#rate-9:checked ~ label {
   margin: 0 auto;
   display: block;
   margin: 0px auto;
+  height: 55vh;
   /* flex-direction: row; */
 }
 
@@ -324,7 +340,7 @@ cursor:pointer;
 }
 
 
-#benchmark label::before{
+/* #benchmark label::before{
   content: "";
   position: absolute;
   z-index: -1;
@@ -340,7 +356,7 @@ cursor:pointer;
      linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
-}
+} */
 
 #btn{
   text-align: end;
@@ -350,7 +366,7 @@ cursor:pointer;
 }
  #benchmark h2{
   margin-bottom: 2em;
-  font-size: 3.5em;
+  font-size: 2.5em;
  }
 
 
@@ -362,7 +378,7 @@ cursor:pointer;
 /* FOOTER */
 
 footer {
-  text-align: center;
+  /* text-align: center; */
 }
 
 hr {
@@ -472,4 +488,11 @@ hr {
     margin-left: 51em;
     vertical-align: -500%;
 }
-  
+.progressQuestion{
+  font-size: 1.1em;
+  margin-top: 3em;
+}
+
+.sel{
+  display: none;
+}

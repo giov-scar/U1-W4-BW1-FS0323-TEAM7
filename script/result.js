@@ -1,14 +1,15 @@
 window.onload = function () {
     result();
   };
-localStorage.getItem("untentPoints")
 console.log(localStorage);
+let punti=localStorage.getItem("untentPoints")
 
 
 
 const result=function(){
+
     const pageResult=document.getElementById("chart")
-    pageResult.innerHTML=`<p> hai fatto :${untentPoints} punti su ${questions.length} domande</p>`
+    pageResult.innerHTML=`<p> hai fatto :${punti} punti su ${questions.length} domande</p>`
     console.log(pageResult);
   }
   result()
