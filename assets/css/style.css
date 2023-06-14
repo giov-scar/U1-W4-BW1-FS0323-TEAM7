@@ -207,9 +207,12 @@ input#rate-9:checked ~ label {
 #benchmark{
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  
 }
 
-#benchmark label {
+/* #benchmark label {
   display: inline-block;
   width: auto;
   padding: 20px 40px;
@@ -223,14 +226,14 @@ input#rate-9:checked ~ label {
   
   padding: 10px 20px;
   margin: 5%;
-}
+} */
 
 #benchmark label:hover{
   
   background-color: transparent;
   background: linear-gradient(transparent, transparent) padding-box,
     linear-gradient(180deg, #d20094,#900080) border-box;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: 50px;
 }
 
@@ -241,6 +244,48 @@ input#rate-9:checked ~ label {
 #benchmark input[type="radio"]:checked + label {
   border: solid 2px green;
 }
+
+
+#benchmark label{
+  --b:5px;  /* border width*/
+  --r:15px; /* the radius */
+
+  color: white;
+  padding: calc(var(--b) + 5px);
+  display: inline-block;
+  margin: 75px 0;
+  position:relative;
+  z-index:0;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
+  width: 400px;
+  text-align: center;
+}
+
+#benchmark label::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  padding: var(--b);
+  border-radius: var(--r);
+  background: var(--c,linear-gradient(to bottom, white, transparent)); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+          mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+
+
+
+
+
+
 
 /* FOOTER */
 
