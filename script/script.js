@@ -95,9 +95,9 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
-// window.onload = function () {
-//   bench();
-// };
+window.onload = function () {
+  bench();
+};
 
 // funzione per modificare il dom e far apparire a video i quiz
 //button next
@@ -133,14 +133,14 @@ const bench = function () {
   //creo elementi con innerHTML
   const divCont = document.getElementById("benchmark");
   //creo h2
-  divCont.innerHTML = `<div class="answer"><h2>${quest.question}</h2></div>
+  divCont.innerHTML = `<h2>${quest.question}</h2>
   ${quest.incorrect_answers.map(
     (incorrect) =>
-      `<div class="answer"><input class="pd" type="radio" name="x" value="${incorrect}">
-    <label>${incorrect}</label></div>`
+      `<input class="pd" type="radio" name="x" value="${incorrect}">
+    <label>${incorrect}</label>`
   )}
-  <div class="answer"><input class="pd" type="radio" name="x" value="${quest.correct_answer}">
-<label>${quest.correct_answer}</label></div>
+  <input class="pd" type="radio" name="x" value="${quest.correct_answer}">
+<label>${quest.correct_answer}</label>
 `;
   console.log(divCont);
   //creo il bottone next
@@ -148,14 +148,12 @@ const bench = function () {
   document.getElementById("btn").appendChild(btnNext);
   point()
 };
-bench()
+
 
 const next = function () {
   //richiamo sul click il bottone e aumento di 1 l'array
   btnNext.addEventListener("click", function () {
-   
     questionNumber++;
-
     if (questionNumber<questions.length) {
       bench();
       console.log("final point ",untentPoints);
@@ -174,14 +172,11 @@ next();
 const changeBtn=function(){
     
   btnNext.innerHTML = `<a id="link" href="result.html">Result</a>`;
+  btnNext.style.textDecoration="none"
   document.getElementById("benchmark").appendChild(btnNext);
 }
 
-const result=function(){
-  const pageResult=document.getElementById("benchmark")
-  pageResult.innerHTML=`<p>${untentPoints}</p>`
-  console.log(pageResult);
-}
 
 console.log("final point ",untentPoints);
 
+localStorage.setItem("untentPoints",untentPoints)
