@@ -114,68 +114,72 @@ li {
   padding-top: 1%;
 }
 #inp {
-  font-size: larger;
-  padding-right: 63%;
-  padding-top: 5%;
-  color: white;
-}
-.checkbox-wrapper {
-  display: inline;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.checkbox-wrapper input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-.checkbox-wrapper .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: transparent;
-  border: 1px solid white;
-}
-.checkbox-wrapper .checkmark::after {
-  content: "";
-  position: absolute;
-  left: 30%;
-  top: 10%;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  display: none;
-}
-.checkbox-wrapper:hover input ~ .checkmark {
-  background-color: transparent;
-}
-.checkbox-wrapper input:checked ~ .checkmark {
-  border-color: white;
-}
-.checkbox-wrapper input:checked ~ .checkmark::after {
-  display: block;
-width: 90%;
+  width: 90%;
   font-size: 1.1em;
     /* padding-right: 51%; */
     /* padding-top: 3em; */
     color: white;
     margin-top: 3%;
   margin-left: 4.5%;}
+  
+  .checkbox-wrapper {
+	display: inline;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  .checkbox-wrapper input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+  }
+  .checkbox-wrapper .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: transparent;
+	border: 1px solid white;
+  }
+  .checkbox-wrapper .checkmark::after {
+	content: "";
+	position: absolute;
+	left: 30%;
+	top: 10%;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	display: none;
+  }
+  .checkbox-wrapper:hover input ~ .checkmark {
+	background-color: transparent;
+  }
+  .checkbox-wrapper input:checked ~ .checkmark {
+	border-color: white;
+  }
+  .checkbox-wrapper input:checked ~ .checkmark::after {
+	display: block;
+  width: 90%;
+	font-size: 1.1em;
+	  /* padding-right: 51%; */
+	  /* padding-top: 3em; */
+	  color: white;
+	  margin-top: 3%;
+	margin-left: 4.5%;}
+  
 
 /* Style FEEDBACK */
 
@@ -339,7 +343,7 @@ cursor:pointer;
 }
 
 
-/* #benchmark label::before{
+#benchmark label::before{
   content: "";
   position: absolute;
   z-index: -1;
@@ -355,7 +359,7 @@ cursor:pointer;
      linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
-} */
+}
 
 #btn{
   text-align: end;
@@ -490,8 +494,4 @@ hr {
 .progressQuestion{
   font-size: 1.1em;
   margin-top: 3em;
-}
-
-.sel{
-  display: none;
 }
