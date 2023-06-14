@@ -133,14 +133,14 @@ const bench = function () {
   //creo elementi con innerHTML
   const divCont = document.getElementById("benchmark");
   //creo h2
-  divCont.innerHTML = `<h2>${quest.question}</h2>
+  divCont.innerHTML = `<div class="answer"><h2>${quest.question}</h2></div>
   ${quest.incorrect_answers.map(
     (incorrect) =>
-      `<input class="pd" type="radio" name="x" value="${incorrect}">
-    <label>${incorrect}</label>`
+      `<div class="answer"><input class="pd" type="radio" name="x" value="${incorrect}">
+    <label>${incorrect}</label></div>`
   )}
-<input class="pd" type="radio" name="x" value="${quest.correct_answer}">
-<label>${quest.correct_answer}</label>
+  <div class="answer"><input class="pd" type="radio" name="x" value="${quest.correct_answer}">
+<label>${quest.correct_answer}</label></div>
 `;
   console.log(divCont);
   //creo il bottone next
