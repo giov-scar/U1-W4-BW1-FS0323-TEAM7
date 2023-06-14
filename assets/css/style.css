@@ -74,8 +74,8 @@ header img {
 
 .butt {
   text-align: right;
-  padding-right: 20%;
-  margin-left: 23%;
+  /* padding-right:300px; */
+  margin-left: 20%;
 }
 
  button {
@@ -114,11 +114,13 @@ li {
   padding-top: 1%;
 }
 #inp {
-  font-size: larger;
+  width: 90%;
+  font-size: 1.1em;
     /* padding-right: 51%; */
-    padding-top: 6%;
+    /* padding-top: 3em; */
     color: white;
-    margin: 0 0 0 3%;}
+    margin-top: 3%;
+  margin-left: 4.5%;}
 
 /* Style FEEDBACK */
 
@@ -320,7 +322,7 @@ cursor:pointer;
 /* FOOTER */
 
 footer {
-  text-align: center;
+  /* text-align: center; */
 }
 
 hr {
