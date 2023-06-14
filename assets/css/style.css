@@ -169,8 +169,7 @@ li {
 }
 .checkbox-wrapper input:checked ~ .checkmark::after {
   display: block;
-}
-  width: 90%;
+width: 90%;
   font-size: 1.1em;
     /* padding-right: 51%; */
     /* padding-top: 3em; */
