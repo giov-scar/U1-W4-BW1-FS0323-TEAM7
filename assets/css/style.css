@@ -235,6 +235,10 @@ input#rate-9:checked ~ label {
   border-radius: 50px;
 }
 
+.pd{
+    width: 20px;
+}
+
 #benchmark input[type="radio"] {
   display: none;
 }

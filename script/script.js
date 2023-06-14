@@ -95,40 +95,68 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
+window.onload = function () {
+  bench();
+};
 
 // funzione per modificare il dom e far apparire a video i quiz
 //button next
 let btnNext = document.createElement("button");
 //inizializzo a 0 l'array
-let answer = 0;
+let questionNumber = 0;
+
+let untentPoints = 0;
+const point = function () {
+  const quest = questions[questionNumber];
+
+  const answerConteiner = document.querySelectorAll("label");
+  answerConteiner.forEach((el) => {
+    el.addEventListener("click", function (e) {
+      e.innerHTML;
+      if (el.innerText === quest.correct_answer) {
+        console.log(el);
+        untentPoints += 10;
+      }
+      console.log(el);
+      console.log("point", untentPoints);
+    });
+    console.log(untentPoints);
+  });
+};
 
 const bench = function () {
-  const quest = questions[answer];
+  const quest = questions[questionNumber];
+
   console.log(quest);
   //creo elementi con innerHTML
   const divCont = document.getElementById("benchmark");
   //creo h2
   divCont.innerHTML = `<h2>${quest.question}</h2>
-  ${quest.incorrect_answers.map((incorrect) =>
-    `<div class='answer'><input type="radio" name="x" value="${incorrect}"></div>
+  ${quest.incorrect_answers.map(
+    (incorrect) =>
+      `<input class="pd" type="radio" name="x" value="${incorrect}">
     <label>${incorrect}</label>`
-   )}
-<input type="radio" name="x" value="${quest.correct_answer}">
+  )}
+<input class="pd" type="radio" name="x" value="${quest.correct_answer}">
 <label>${quest.correct_answer}</label>
-`
-console.log(divCont);
-//creo il bottone next
+`;
+  console.log(divCont);
+  //creo il bottone next
   btnNext.innerHTML = "Next";
   document.getElementById("benchmark").appendChild(btnNext);
+  point()
 };
-bench();
 
-const next=function(){
+const next = function () {
   //richiamo sul click il bottone e aumento di 1 l'array
-  btnNext.addEventListener("click",function(){
-    answer++ 
-    bench()
-    console.log(answer);
-  })
+  btnNext.addEventListener("click", function () {
+    questionNumber++;
+    bench();
+    console.log(questionNumber);
+  });
+};
+next();
+
+const result=function(){
+  const pageResult=document.
 }
-next()
