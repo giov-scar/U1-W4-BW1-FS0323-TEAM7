@@ -16,79 +16,11 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 20
-let timePassed = 0
-let timeLeft = TIME_LIMIT
-
-
+const TIME_LIMIT = 5;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
 let timerInterval = null;
-
-
-const startTimer = function(){
-    timerInterval= setInterval(() =>{
-        timePassed = timePassed += 1;
-        timeLeft = TIME_LIMIT - timePassed;
-        document.getElementById('base-timer-label').innerHTML = formatTimeLeft(timeLeft)
-    }, 1000 )
-}
-
-
-
-document.getElementById('benchmark').innerHTML= `...`
-startTimer()
-
-
-
-const COLOR_CODE = {
-    info:{
-        color: "green"
-    }
-}
-
-let remainingPathColor = COLOR_CODE.info.color
-
-const calculateTimeFraction = function(){
-    return timeLeft / TIME_LIMIT
-}
-//Length = 2πr = 2 * π * 45 = 282,6
-
-
-const setCircleDasharray = function(){
-    const circleDasharray = `${(
-        calculateTimeFraction() * FULL
-    )}`
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let remainingPathColor = COLOR_CODES.info.color;
 
 document.getElementById("timer").innerHTML = `
 <div class="base-timer">
@@ -131,7 +63,8 @@ function startTimer() {
     setRemainingPathColor(timeLeft);
 
     if (timeLeft === 0) {
-      onTimesUp();
+      timePassed= -1;
+      
     }
   }, 1000);
 }
@@ -144,7 +77,7 @@ function formatTime(time) {
     seconds = `0${seconds}`;
   }
 
-  return `${minutes}:${seconds}`;
+  return `<p>SECONDS</P> ${seconds}<p>REMAINING</P>`;
 }
 
 function setRemainingPathColor(timeLeft) {
