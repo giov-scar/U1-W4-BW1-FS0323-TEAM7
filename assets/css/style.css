@@ -75,8 +75,9 @@ header img {
 .butt {
   text-align: right;
   padding-right: 20%;
-  padding-bottom: 20%;
+  margin-left: 23%;
 }
+
  button {
   font-family: "Outfit", sans-serif;
   font-size: 1.2rem;
@@ -87,14 +88,20 @@ header img {
   margin: 0 auto;
   width: 200px;
   height: 50px;
-  
 } 
+button a{
+  text-decoration: none;
+  color: white;
+}
 button:hover {
   cursor: pointer;
   box-shadow: 0px 3px 25px 5px #00ffff;
   transition: 0.7s;
   background-color: #00ffff;
   border: none;
+  color: black;
+}
+button a:hover{
   color: black;
 }
 ul {
@@ -108,10 +115,10 @@ li {
 }
 #inp {
   font-size: larger;
-  padding-right: 67%;
-  padding-top: 6%;
-  color: white;
-}
+    /* padding-right: 51%; */
+    padding-top: 6%;
+    color: white;
+    margin: 0 0 0 3%;}
 
 /* Style FEEDBACK */
 
@@ -214,6 +221,7 @@ input#rate-9:checked ~ label {
   margin: 0 auto;
   display: block;
   margin: 0px auto;
+  height: 55vh;
   /* flex-direction: row; */
 }
 
@@ -300,7 +308,7 @@ cursor:pointer;
 }
  #benchmark h2{
   margin-bottom: 2em;
-  font-size: 3.5em;
+  font-size: 2.5em;
  }
 
 
@@ -422,4 +430,7 @@ hr {
     margin-left: 51em;
     vertical-align: -500%;
 }
-  
+.progressQuestion{
+  font-size: 1.1em;
+  margin-top: 3em;
+}

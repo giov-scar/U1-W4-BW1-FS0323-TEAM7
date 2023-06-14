@@ -4,16 +4,16 @@ const ALERT_THRESHOLD = 5;
 
 const COLOR_CODES = {
   info: {
-    color: "green"
+    color: "green",
   },
   warning: {
     color: "orange",
-    threshold: WARNING_THRESHOLD
+    threshold: WARNING_THRESHOLD,
   },
   alert: {
     color: "red",
-    threshold: ALERT_THRESHOLD
-  }
+    threshold: ALERT_THRESHOLD,
+  },
 };
 
 const TIME_LIMIT = 5;
@@ -46,7 +46,6 @@ document.getElementById("timer").innerHTML = `
 </div>
 `;
 
-startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
@@ -56,15 +55,13 @@ function startTimer() {
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
-    document.getElementById("base-timer-label").innerHTML = formatTime(
-      timeLeft
-    );
+    document.getElementById("base-timer-label").innerHTML =
+      formatTime(timeLeft);
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
 
     if (timeLeft === 0) {
-      timePassed= -1;
-      
+      timePassed = -1;
     }
   }, 1000);
 }
@@ -112,3 +109,8 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+
+const resetTime = function () {
+  timeLeft = TIME_LIMIT;
+  console.log("timer",timeLeft);
+};

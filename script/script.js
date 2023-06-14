@@ -96,7 +96,10 @@ const questions = [
   },
 ];
 window.onload = function () {
+  localStorage.removeItem("untentPoints")
   bench();
+  startTimer();
+
 };
 
 // funzione per modificare il dom e far apparire a video i quiz
@@ -138,15 +141,18 @@ const bench = function () {
     (incorrect) =>
       `<input class="pd" type="radio" name="x" value="${incorrect}">
     <label>${incorrect}</label>`
-  )}
+  ).join("")
+}
   <input class="pd" type="radio" name="x" value="${quest.correct_answer}">
 <label>${quest.correct_answer}</label>
+<p class="progressQuestion">QUESTION ${questionNumber+1} <span style=color:#900080>/${questions.length}</span></p>
 `;
   console.log(divCont);
   //creo il bottone next
   btnNext.innerHTML = "Next";
   document.getElementById("btn").appendChild(btnNext);
   point()
+  
 };
 
 
@@ -154,6 +160,11 @@ const next = function () {
   //richiamo sul click il bottone e aumento di 1 l'array
   btnNext.addEventListener("click", function () {
     questionNumber++;
+    onTimesUp()
+    resetTime()
+    startTimer()
+    
+  
     if (questionNumber<questions.length) {
       bench();
       console.log("final point ",untentPoints);
@@ -161,7 +172,8 @@ const next = function () {
     }else{
       changeBtn()
     }
-    
+   
+localStorage.setItem("untentPoints",untentPoints)
    
     console.log(questionNumber);
 
@@ -171,12 +183,10 @@ next();
 
 const changeBtn=function(){
     
-  btnNext.innerHTML = `<a id="link" href="result.html">Result</a>`;
+  btnNext.innerHTML = `<a class="button" id="link" href="result.html">Result</a>`;
   btnNext.style.textDecoration="none"
-  document.getElementById("benchmark").appendChild(btnNext);
+  document.getElementById("btn").appendChild(btnNext);
 }
 
 
 console.log("final point ",untentPoints);
-
-localStorage.setItem("untentPoints",untentPoints)
