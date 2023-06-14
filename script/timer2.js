@@ -1,5 +1,23 @@
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
 
+const COLOR_CODES = {
+  info: {
+    color: "green"
+  },
+  warning: {
+    color: "orange",
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: "red",
+    threshold: ALERT_THRESHOLD
+  }
+};
+let remainingPathColor = COLOR_CODES.info.color;
 
+ 
 document.getElementById("timer").innerHTML = `
 <div class="base-timer">
   <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -8,7 +26,7 @@ document.getElementById("timer").innerHTML = `
       <path
         id="base-timer-path-remaining"
         stroke-dasharray="283"
-        class="base-timer__path-remaining "
+        class="base-timer__path-remaining ${remainingPathColor}"
         d="
           M 50, 50
           m -45, 0
@@ -24,7 +42,7 @@ document.getElementById("timer").innerHTML = `
 
 
 
-let time = 0.25 * 60; //minutes * 60 seconds
+let time = 1 * 60; //minutes * 60 seconds
 let refreshIntervalId = setInterval(updateCountdown, 1000); //update every 1 second
 
 function updateCountdown() {
@@ -36,8 +54,44 @@ function updateCountdown() {
     contdownEl.innerHTML = `${minutes}:${seconds}`;
 
     time--;
+    setCircleDasharray();
+    setRemainingPathColor(time);
 
     if (time === 0) {
-        time = 5
+        time = 1 * 60
     }
 }
+
+function setRemainingPathColor(time) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (time <= alert.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(warning.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(alert.color);
+  } else if (time <= warning.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(info.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = time / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById("base-timer-path-remaining")
+    .setAttribute("stroke-dasharray", circleDasharray);
+}
+

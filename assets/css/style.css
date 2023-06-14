@@ -6,6 +6,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+header{
+  margin-right: 100px;
+}
 h1 {
   color: white;
   font-weight: 600;
@@ -50,6 +53,7 @@ p {
 header img {
   width: 15%;
   margin: 3% 0 0 5%;
+
 }
 
 /* MAIN */
@@ -291,8 +295,9 @@ body {
   
   .base-timer {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 170px;
+    height: 170px;
+    
   }
   
   .base-timer__svg {
@@ -306,7 +311,7 @@ body {
   
   .base-timer__path-elapsed {
     stroke-width: 7px;
-    stroke: grey;
+    stroke: rgba(255, 255, 255, 0.123);
   }
   
   .base-timer__path-remaining {
@@ -320,24 +325,34 @@ body {
   }
   
   .base-timer__path-remaining.green {
-    color: rgb(65, 184, 131);
+    color: #00ffff;
   }
   
   .base-timer__path-remaining.orange {
-    color: orange;
+    color: #00ffff;
   }
   
   .base-timer__path-remaining.red {
-    color: red;
+    color: #00ffff;
   }
   
   .base-timer__label {
-    position: absolute;
-    width: 300px;
-    height: 300px;
+   position: absolute;
+    width: 170px;
+    height: 170px;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 48px;
+    font-family: "Outfit", sans-serif;
+    color: white;
+    flex-direction: column;
+    
+  }
+  #timer{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
   }
