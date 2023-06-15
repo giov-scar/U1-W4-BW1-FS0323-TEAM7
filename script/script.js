@@ -99,6 +99,38 @@ window.onload = function () {
   localStorage.removeItem("untentPoints");
   bench();
 };
+let time = 60; //minutes * 60 seconds
+let refreshIntervalId = setInterval(updateCountdown, 1000); //update every 1 second
+const contdownEl = document.getElementById("sec"); 
+let ss = document.getElementById('ss')
+function updateCountdown() {
+    
+    let seconds = time ;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds; 
+    
+    contdownEl.innerHTML = `<p>SECONDS</P> ${seconds}<p>REMAINING</P>`;
+
+    time--;
+    ss.style.strokeDashoffset = 450*time/60
+    if (time === 0) {
+      setTimeout(() => {
+        timerNext()
+      }, 900);  
+      
+    }
+}
+
+const resetTimer = function(){
+  time = 60// setto il tempo a 60' secondi quando riparte
+}
+const timerNext=function(){
+  if (questionNumber < questions.length) {
+    questionNumber++
+    resetTimer()
+    bench()
+  }
+}
 
 // funzione per modificare il dom e far apparire a video i quiz
 //button next
@@ -120,7 +152,10 @@ const point = function () {
       questions[questionNumber].correct_answer
     ) {
       untentPoints += 10;
+      
       console.log("incremento", untentPoints);
+    }else{
+      alert("oh no")
     }
 
     console.log("point", untentPoints);
@@ -175,6 +210,8 @@ const bench = function () {
   document.getElementById("btn").appendChild(btnNext);
 };
 
+
+
 const next = function () {
   //richiamo sul click il bottone e aumento di 1 l'array
   btnNext.addEventListener("click", function () {
@@ -186,6 +223,10 @@ const next = function () {
       console.log("final point ", untentPoints);
     } else {
       changeBtn();
+      setTimeout(() => {
+        window.location.href="result.html"
+      }, 4000);
+     
     }
 
     localStorage.setItem("untentPoints", untentPoints);
