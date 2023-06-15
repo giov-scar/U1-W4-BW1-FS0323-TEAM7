@@ -1,42 +1,63 @@
- window.onload = function () {
-   //  result();
-  };
+window.onload = function () {
+  //  result();
+};
 console.log(localStorage);
-let punti= 50
-let wrong = questions.length *10 - punti
-//localStorage.getItem('untentPoints')
-console.log(wrong)
+let punti = localStorage.getItem("untentPoints");
+let wrong = questions.length * 10 - punti;
 
+console.log(wrong);
 
-// const result=function(){
+const chart = function () {
+  const ctx = document.getElementById("myChart");
 
-//     const pageResult=document.getElementById("chart")
-//     pageResult.innerHTML= `<p> hai fatto :${punti} punti su ${questions.length} domande</p>`
-//     console.log(pageResult);
-//   }
-//   result()
+  new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      labels: ["Wrong", "Right"],
 
-  const chart = function(){
-    const ctx = document.getElementById('myChart');
+      datasets: [
+        {
+          borderWidth: 0,
+            cutout: 160,
+          // label: ["wrong", "rigth"],
+          data: [wrong, punti],
+          backgroundColor: ["#d30fb9", "#00ffff"],
+        },
+      ],
+    },
+  });
+};
+chart();
+const result = function () {
+  const pageResult = document.getElementById("firstP");
 
-    new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        labels: ['Wrong','Right'],
-        datasets: [{
-          borderWidth:0,
-          cutout: 200,
-          label: '# of Votes',
-          data: [punti,wrong],
-          backgroundColor: [
-            
-            '#d30fb9','#00ffff',
-            
-          ],
-        }]
-      },
+  pageResult.innerHTML = `<h2> Correct</h2> <p>${punti}%</p> <P>${punti/questions.length}/ ${
+    questions.length
+  } questions</p>`;
+  console.log(pageResult);
+};
+result();
+const result2 = function () {
+  const pageResult = document.getElementById("secondP");
 
-    });
-    };
-    chart()
-  
+  pageResult.innerHTML = `<h2> Wrong</h2> <p>${wrong}%</p> <P>${punti/questions.length}/ ${
+    questions.length
+  } questions</p>`;
+  console.log(pageResult);
+};
+result2();
+const centralP=function(){
+  const passed=`<h4>Congratulations!</h4> 
+  <h4>You passed the exam</h4><br>
+  <p>We'll send you the certificate in 
+  few minutes.
+  Check your email(including promotions / spam folder)</p>`
+  const notPassed=`<h4>Oh nooo</h4><h4>You didn't pass the exam! attaccate ar cazzo</h4>`
+  const centralP=document.getElementById("centralP")
+  if(punti>60){
+  centralP.innerHTML=`${passed}`}
+  else{
+    centralP.innerHTML=`${notPassed}`
+  }
+}
+centralP()

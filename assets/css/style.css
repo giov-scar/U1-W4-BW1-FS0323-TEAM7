@@ -543,11 +543,89 @@ color: white;
 flex-direction: column;
 
 }
+.circle span p{
+  font-size: 0.25em;
+}
 /*chart*/
-#myChart{
-
+#myChart labels{
+  position: relative;
+  display: none;
 }
 #chart{
   max-width: 30%;
   margin: 0 auto;
+}
+
+#firstP{
+     /* display: flex; */
+     flex-direction: row;
+     justify-content: flex-start;
+     align-content: center;
+     /* height: 361px
+ px
+ ; */
+     position: absolute;
+     top: 400px;
+     left: 19%;
+     /* font-size: 3em; */
+ }
+#firstP p:nth-child(3){
+  font-size: 1.1em;
+  text-align: start;
+  color: rgba(255, 255, 255, 0.779);
+}
+#secondP p:nth-child(3){
+  font-size: 1.1em;
+  text-align: end;
+  color: rgba(255, 255, 255, 0.779);
+}
+#firstP p:nth-child(2){
+  font-size: 3.5em;
+  font-weight: 600;
+  text-align: start;
+
+}
+#secondP p:nth-child(2){
+  font-size: 3.5em;
+  font-weight: 600;
+  text-align: end;
+
+}
+#firstP h2,#secondP h2{
+  font-weight:400 ;
+
+}
+#secondP{
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  /* height: 361px
+px
+; */
+  position: absolute;
+  top: 400px;
+  left: 70%;
+  /* font-size: 3em; */
+}
+#centralP{
+position: absolute;
+top: 350px;
+max-width: min-content;
+left: 655px;
+font-size: 1.6em;
+text-align: center;
+line-height: 1.2em;
+}
+#centralP h4{
+font-weight: 600;
+color: white;
+}
+#centralP h4:nth-child(2){
+font-weight: 600;
+color:rgb(4, 190, 190);
+font-size: 0.8em;
+}
+#centralP p{
+  color: rgba(255, 255, 255, 0.779);
 }
