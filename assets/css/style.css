@@ -543,3 +543,11 @@ color: white;
 flex-direction: column;
 
 }
+/*chart*/
+#myChart{
+
+}
+#chart{
+  max-width: 30%;
+  margin: 0 auto;
+}
