@@ -101,6 +101,30 @@ window.onload = function () {
   startTimer();
 
 };
+//timer
+let time = 4
+let refreshIntervalId = setInterval(updateCountdown, 1000); //update every 1 second
+const contdownEl = document.getElementById("sec"); 
+let ss = document.getElementById('ss')
+function updateCountdown() {
+    
+    let seconds = time ;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds; 
+    
+    contdownEl.innerHTML = `<p>SECONDS</P> ${seconds}<p>REMAINING</P>`;
+
+    time--;
+    ss.style.strokeDashoffset = 450*time/60
+    if (time === 0) {
+      timerNext()
+      
+    }
+}
+
+const resetTimer = function(){
+  time = 60
+}
 
 // funzione per modificare il dom e far apparire a video i quiz
 //button next
@@ -190,3 +214,12 @@ const changeBtn=function(){
 
 
 console.log("final point ",untentPoints);
+
+
+const timerNext = function(){
+  if(questionNumber<questions.length){
+    questionNumber++
+    resetTimer()
+    bench()
+  }
+}
