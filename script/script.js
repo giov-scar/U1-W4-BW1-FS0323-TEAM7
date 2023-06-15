@@ -96,10 +96,8 @@ const questions = [
   },
 ];
 window.onload = function () {
-  localStorage.removeItem("untentPoints")
+  localStorage.removeItem("untentPoints");
   bench();
-  startTimer();
-
 };
 
 // funzione per modificare il dom e far apparire a video i quiz
@@ -113,80 +111,94 @@ const point = function () {
   const quest = questions[questionNumber];
 
   const answerConteiner = document.querySelectorAll("label");
-  answerConteiner.forEach((el) => {
-    el.addEventListener("click", function (e) {
-      // e.innerHTML;
-      el.classList.add("sel")
-      console.log("check",el);
-      if (el.innerText === quest.correct_answer) {
-        console.log(el);
-        untentPoints += 10;
-      }
-      console.log(el);
-      console.log("point", untentPoints);
-    });
-    console.log(untentPoints);
-   
+  // answerConteiner.forEach((el) => {
+  btnNext.addEventListener("click", function (e) {
+    e.target;
+    console.log(e);
+    if (
+      document.querySelector(".sel").innerText ===
+      questions[questionNumber].correct_answer
+    ) {
+      untentPoints += 10;
+      console.log("incremento", untentPoints);
+    }
+
+    console.log("point", untentPoints);
   });
-  return untentPoints
+  console.log(untentPoints);
+  // });
+  return untentPoints;
 };
+point();
+
+const press = document.getElementById("benchmark");
+let pressButton = null;
+const quest = questions[questionNumber];
+
+const buttonPressed = (e) => {
+  if (e.target.nodeName === "LABEL") {
+    console.log("butt", e);
+    e.target.classList.add("sel"); // Add .active CSS Class
+
+    if (pressButton !== null) {
+      pressButton.classList.remove("sel"); // Remove .active CSS Class
+    }
+
+    pressButton = e.target;
+  }
+};
+press.addEventListener("click", buttonPressed);
 
 const bench = function () {
   const quest = questions[questionNumber];
-
   console.log(quest);
   //creo elementi con innerHTML
   const divCont = document.getElementById("benchmark");
   //creo h2
   divCont.innerHTML = `<h2>${quest.question}</h2>
-  ${quest.incorrect_answers.map(
-    (incorrect) =>
-      `<input class="pd" type="radio" name="x" value="${incorrect}">
-    <label>${incorrect}</label>`
-  ).join("")
-}
-  <input class="pd" type="radio" name="x" value="${quest.correct_answer}">
-<label>${quest.correct_answer}</label>
-<p class="progressQuestion">QUESTION ${questionNumber+1} <span style=color:#900080>/${questions.length}</span></p>
+  ${quest.incorrect_answers
+    .map(
+      (incorrect) =>
+        `<input type="radio" name="x" value="${incorrect}">
+    <label >${incorrect}</label>`
+    )
+    .join("")}
+  <input type="radio" name="x" value="${quest.correct_answer}">
+<label >${quest.correct_answer}</label>
+<p class="progressQuestion">QUESTION ${
+    questionNumber + 1
+  } <span style=color:#900080>/${questions.length}</span></p>
 `;
   console.log(divCont);
   //creo il bottone next
   btnNext.innerHTML = "Next";
   document.getElementById("btn").appendChild(btnNext);
-  point()
-  
 };
-
 
 const next = function () {
   //richiamo sul click il bottone e aumento di 1 l'array
   btnNext.addEventListener("click", function () {
     questionNumber++;
-    resetTimer()
-    
-  
-    if (questionNumber<questions.length) {
+    resetTimer();
+
+    if (questionNumber < questions.length) {
       bench();
-      console.log("final point ",untentPoints);
-
-    }else{
-      changeBtn()
+      console.log("final point ", untentPoints);
+    } else {
+      changeBtn();
     }
-   
-localStorage.setItem("untentPoints",untentPoints)
-   
-    console.log(questionNumber);
 
+    localStorage.setItem("untentPoints", untentPoints);
+
+    console.log(questionNumber);
   });
 };
 next();
 
-const changeBtn=function(){
-    
+const changeBtn = function () {
   btnNext.innerHTML = `<a class="button" id="link" href="result.html">Result</a>`;
-  btnNext.style.textDecoration="none"
+  btnNext.style.textDecoration = "none";
   document.getElementById("btn").appendChild(btnNext);
-}
+};
 
-
-console.log("final point ",untentPoints);
+console.log("final point ", untentPoints);
