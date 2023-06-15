@@ -182,21 +182,21 @@ li {
 
 /* Style FEEDBACK */
 
-
+.btnFeedback {
+  text-align: center;
+  margin-top: 3.5em;
+}
 
 #pfeedback p {
     margin: 20px 25%;
     color: white;
     text-align: center;
     font-weight: 400;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
 }
 
 .container4 {
-    text-align: center;
-    align-items: center;
-    margin: 0px 26% 103px;
-    padding: 42px 11px;
+    height: 130px;
 }
 .pfeedback {
   margin: 20px 270px;
@@ -210,16 +210,22 @@ li {
   display: none;
 }
 
-.rating label {
+.rating {
+  display: flex;
+  margin: 68px 0px;
+  padding: 9px 33%;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
 
-    font-size: 70px;
+.rating label {
     color: #100c31;
     margin: 5px;
     transition: all 0.2s ease;
    float: right;
-  font-size: 40px;
-
+  font-size: 3em;
 }
+
 input:not(:checked) ~ label:hover,
 input:not(:checked) ~ label:hover ~ label{
     color: rgb(0, 255, 255);
