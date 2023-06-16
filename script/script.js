@@ -471,7 +471,7 @@ const selectButton = function () {
           questions.push(el);
         });
         console.log(questions);
-        document.getElementById("timer").style.display = "block";
+        document.getElementById("timer").style.display = "inline-block";
         resetTimer();
         bench();
       } else if (el.target.innerHTML === "MEDIUM") {
@@ -481,7 +481,7 @@ const selectButton = function () {
 
         console.log(el);
         resetTimer();
-        document.getElementById("timer").style.display = "block";
+        document.getElementById("timer").style.display = "inline-block";
         bench();
       } else {
         hard.forEach((el) => {
@@ -489,7 +489,7 @@ const selectButton = function () {
         });
         bench();
         resetTimer();
-        document.getElementById("timer").style.display = "block";
+        document.getElementById("timer").style.display = "inline-block";
       }
     });
   });

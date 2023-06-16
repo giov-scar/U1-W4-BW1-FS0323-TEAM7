@@ -6,7 +6,7 @@ window.onload = function () {
 console.log(localStorage);
 let punti = localStorage.getItem("untentPoints");
 // variabile per mostrare le domande sbagliate
-let wrong = questions.length * 10 - punti;
+let wrong = easy.length * 10 - punti;
 
 console.log(wrong);
 // chart doughnut per grafico risultati
@@ -46,8 +46,8 @@ chart();
 const result = function () {
   const pageResult = document.getElementById("firstP");
 
-  pageResult.innerHTML = `<h2> Correct</h2> <p>${punti}%</p> <P>${punti/questions.length}/ ${
-    questions.length
+  pageResult.innerHTML = `<h2> Correct</h2> <p>${punti}%</p> <P>${punti/easy.length}/ ${
+    easy.length
   } questions</p>`;
   console.log(pageResult);
 };
@@ -57,8 +57,8 @@ result();
 const result2 = function () {
   const pageResult = document.getElementById("secondP");
 
-  pageResult.innerHTML = `<h2> Wrong</h2> <p>${wrong}%</p> <P>${wrong/questions.length}/ ${
-    questions.length
+  pageResult.innerHTML = `<h2> Wrong</h2> <p>${wrong}%</p> <P>${wrong/easy.length}/ ${
+    easy.length
   } questions</p>`;
   console.log(pageResult);
 };
