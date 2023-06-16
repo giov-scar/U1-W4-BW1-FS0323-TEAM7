@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600&display=swap");
 
-/* GENERAL SETTING */
+/* GENERAL SETTING ----------------------------------------------------------------------------------------*/
 body {
   font-family: "Outfit", sans-serif;
   background-image: url(../img/bg.jpg);
@@ -49,14 +49,14 @@ p {
   font-size: 1rem;
 }
 
-/* HEADER */
+/* HEADER ----------------------------------------------------------------------------------------*/
 
 header img {
   width: 15%;
   margin: 3% 0 0 5%;
 }
 
-/* MAIN */
+/* MAIN ----------------------------------------------------------------------------------------*/
 .p2 {
   color: white;
   padding-left: 4%;
@@ -75,7 +75,6 @@ header img {
 
 .butt {
   text-align: right;
-  /* padding-right:300px; */
   margin-left: 20%;
 }
 
@@ -118,8 +117,6 @@ li {
 #inp {
   width: 90%;
   font-size: 1.1em;
-  /* padding-right: 51%; */
-  /* padding-top: 3em; */
   color: white;
   margin-top: 3%;
   margin-left: 4.5%;
@@ -185,7 +182,7 @@ li {
   display: block;
 }
 
-/* Style FEEDBACK */
+/* Style FEEDBACK ----------------------------------------------------------------------------------------*/
 
 .btnFeedback {
   text-align: center;
@@ -242,7 +239,7 @@ input#rate-9:checked ~ label {
   color: rgb(0, 255, 255);
 }
 
-/* RESULT STYLE */
+/* RESULT STYLE ----------------------------------------------------------------------------------------*/
 
 #rating {
   display: flex;
@@ -282,7 +279,7 @@ input#rate-9:checked ~ label {
   color: black;
 }
 
-/* STILE BOTTONI RISPOSTE */
+/* STILE BOTTONI RISPOSTE ----------------------------------------------------------------------------------------*/
 #benchmark {
   text-align: center;
   width: 80%;
@@ -290,24 +287,8 @@ input#rate-9:checked ~ label {
   display: block;
   margin: 0px auto;
   height: 55vh;
-  /* flex-direction: row; */
 }
 
-/* #benchmark label {
-  display: inline-block;
-  width: auto;
-  padding: 20px 40px;
-  cursor: pointer;
-  color: white;
-  background-color: transparent;
-  border: 1px solid;
-  border-radius: 50px;
-  border-image: linear-gradient(180deg, #d20094,#900080) 10;
-  
-  
-  padding: 10px 20px;
-  margin: 5%;
-} */
 
 #benchmark label:hover {
   background-color: transparent;
@@ -317,9 +298,6 @@ input#rate-9:checked ~ label {
   border-radius: 50px;
 }
 
-/* .pd{
-    width: 20px;
-} */
 
 #benchmark input[type="radio"] {
   display: none;
@@ -329,9 +307,7 @@ input#rate-9:checked ~ label {
   background: linear-gradient(transparent, transparent) padding-box,
     linear-gradient(180deg, #d20094, #900080) border-box;
 }
-/* .sel {
-  background-color: #100c31;
-} */
+
 
 #benchmark label {
   background: #ffffff2b;
@@ -375,7 +351,7 @@ input#rate-9:checked ~ label {
   font-size: 2.5em;
 }
 
-/* FOOTER */
+/* FOOTER ----------------------------------------------------------------------------------------*/
 
 hr {
   text-align: center;
@@ -410,13 +386,8 @@ hr {
   left: 0;
 }
 
-/* Clock */
-/* body {
-    font-family: sans-serif;
-    display: grid;
-    height: 100vh;
-    place-items: center;
-  } */
+/* Clock ----------------------------------------------------------------------------------------*/
+
 
 .base-timer {
   position: relative;
@@ -529,7 +500,9 @@ hr {
 .circle span p {
   font-size: 0.25em;
 }
-/*chart*/
+
+/*CHART ----------------------------------------------------------------------------------------*/
+
 #myChart labels {
   position: relative;
   display: none;
@@ -537,22 +510,9 @@ hr {
 #chart {
   position: relative;
   max-width: 30%;
-  margin: 0 auto;
 }
 
-#firstP {
-  /* display: flex; */
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: center;
-  /* height: 361px
- px
- ; */
-  position: absolute;
-  top: 400px;
-  left: 19%;
-  /* font-size: 3em; */
-}
+
 #firstP p:nth-child(3) {
   font-size: 1.1em;
   text-align: start;
@@ -577,27 +537,13 @@ hr {
 #secondP h2 {
   font-weight: 400;
 }
-#secondP {
-  /* display: flex; */
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: center;
-  /* height: 361px
-px
-; */
-  position: absolute;
-  top: 400px;
-  left: 70%;
-  /* font-size: 3em; */
-}
+
 #centralP {
   position: absolute;
-  top: 175px;
-  max-width: fit-content;
-  left: 20%;
   font-size: 1.6em;
   text-align: center;
-  line-height: 1.2em;
+  line-height: 1em;
+  padding-left: 1%;
 }
 #centralP h4 {
   font-weight: 600;
@@ -608,6 +554,18 @@ px
   color: rgb(4, 190, 190);
   font-size: 0.8em;
 }
+#centralP h5:nth-child(3) {
+  font-weight: 600;
+  color: rgb(4, 190, 190);
+  font-size: 0.8em;
+}
 #centralP p {
   color: rgba(255, 255, 255, 0.779);
+}
+
+#box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
