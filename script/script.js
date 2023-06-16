@@ -269,4 +269,3 @@ const changeBtn = function () {
 };
 
 console.log("final point ", untentPoints);
-//

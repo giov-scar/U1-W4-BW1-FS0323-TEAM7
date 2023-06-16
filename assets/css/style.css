@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600&display=swap");
 
 /* GENERAL SETTING */
 body {
@@ -12,7 +12,7 @@ header{
 }
 h1 {
   color: white;
-  font-weight: 600;
+  font-weight: 300;
   text-align: left;
   font-size: 80px;
   margin: 2% 1 1% 0;
@@ -22,7 +22,9 @@ h1 {
 .bolder {
   font-weight: bolder;
   padding-top: 0;
-  font-size: 85px;
+  font-size: 79px;
+  margin-bottom: 0.6em;
+  
 }
 h3 {
   color: rgb(230, 17, 230);
@@ -61,12 +63,14 @@ header img {
 .p2{
     color: white;
     padding-left: 4%;
+    font-weight: 200;
     
 }
 .p3{
     color: white;
     padding-left: 4%;
     padding-top: 0.5%;
+    font-weight: 200;
 }
 #rating {
   display: flex;
@@ -113,6 +117,7 @@ ul {
 }
 li {
   padding-top: 1%;
+  font-weight: 200;
 }
 #inp {
   width: 90%;
