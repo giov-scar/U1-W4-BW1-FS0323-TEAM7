@@ -64,7 +64,7 @@ const centralP=function(){
   <p>We'll send you the certificate in 
   few minutes.
   Check your email(including promotions / spam folder)</p>`
-  const notPassed=`<h4>Oh nooo</h4><h4>You didn't pass the exam! attaccate ar cazzo</h4>`
+  const notPassed=`<h4>Oh nooo</h4><br><h4>You didn't pass the exam! <br>attaccate ar cazzo</h4>`
 
   const centralP=document.getElementById("centralP")
   //controllo i punti per far apparire successo o fail dell'quiz
