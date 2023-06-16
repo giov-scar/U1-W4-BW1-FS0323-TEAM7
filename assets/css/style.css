@@ -147,6 +147,8 @@ li {
   cursor: pointer;
   height: 0;
   width: 0;
+  left:20px;
+  top:-60px
 }
 
 .checkbox-wrapper .checkmark {
