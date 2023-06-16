@@ -141,8 +141,8 @@ li {
   cursor: pointer;
   height: 1px;
   width: 1px;
-  left: 0px;
-  top: 0px;
+  left: 5px;
+  top: 15px;
 }
 
 .checkbox-wrapper .checkmark {
@@ -251,6 +251,7 @@ input#rate-9:checked ~ label {
 #outcome p {
   text-align: center;
   margin: 0;
+  margin-bottom: 4%;
 }
 
 #rating a {
@@ -506,10 +507,13 @@ hr {
 #myChart labels {
   position: relative;
   display: none;
+  
 }
 #chart {
   position: relative;
   max-width: 30%;
+  margin-left: -1%;
+  
 }
 
 
@@ -543,7 +547,6 @@ hr {
   font-size: 1.6em;
   text-align: center;
   line-height: 1em;
-  padding-left: 1%;
 }
 #centralP h4 {
   font-weight: 600;

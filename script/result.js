@@ -14,6 +14,7 @@ const chart = function () {
   const ctx = document.getElementById("myChart");
 
   new Chart(ctx, {
+    
     type: "doughnut",
     data: {
       labels: ["Wrong", "Right"],
@@ -27,7 +28,15 @@ const chart = function () {
           backgroundColor: ["#d30fb9", "#00ffff"],
         },
       ],
-    },
+    },options: {
+      // Add plugins to options.
+      plugins: {
+          legend: {
+              display: false // This hides all text in the legend and also the labels.
+          }
+      }
+      // add your scales or other options.
+  }
   });
 };
 chart();
@@ -64,7 +73,7 @@ const centralP=function(){
   <p>We'll send you the certificate <br>in 
   few minutes.<br>
   Check your email(including <br>promotions / spam folder)</p>`
-  const notPassed=`<h4>Oh nooo</h4><br><h5>You didn't pass the exam! <br>attaccate ar cazzo</h5>`
+  const notPassed=`<h4>Oh nooo</h4><br><h5>You didn't pass the exam! <br>ATTACCATE!</h5>`
 
   const centralP=document.getElementById("centralP")
   //controllo i punti per far apparire successo o fail dell'quiz
