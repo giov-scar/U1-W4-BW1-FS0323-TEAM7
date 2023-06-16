@@ -95,10 +95,22 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
+
+//faccio partire la funzione bench() all'avvio della pagina
 window.onload = function () {
   localStorage.removeItem("untentPoints");
   bench();
+}
+
+const difficulty=function(){
+  const medium= URL("https://opentdb.com/api.php?amount=10&category=18&difficulty=medium")
+  const hard= URL("https://opentdb.com/api.php?amount=10&category=18&difficulty=hard")
+
+difficulty()
+
 };
+
+//timer 
 let time = 60; //minutes * 60 seconds
 let refreshIntervalId = setInterval(updateCountdown, 1000); //update every 1 second
 const contdownEl = document.getElementById("sec"); 
@@ -120,7 +132,7 @@ function updateCountdown() {
       
     }
 }
-
+//reset timer
 const resetTimer = function(){
   time = 60// setto il tempo a 60' secondi quando riparte
 }
@@ -145,6 +157,7 @@ const point = function () {
   const answerConteiner = document.querySelectorAll("label");
   // answerConteiner.forEach((el) => {
   btnNext.addEventListener("click", function (e) {
+    //aggiungo i punti  e faccio il controllo al nextButton
     e.target;
     console.log(e);
     if (
@@ -152,10 +165,21 @@ const point = function () {
       questions[questionNumber].correct_answer
     ) {
       untentPoints += 10;
-      
+      Swal.fire({
+        title:'Good Job',
+        icon:'success',
+        showConfirmButton:false,
+        timer:"1500"
+
+      })
       console.log("incremento", untentPoints);
     }else{
-      alert("oh no")
+      Swal.fire({
+        title:'Oh Noo',
+        icon:'error',
+        timer:"1500",
+        showConfirmButton:false
+      })
     }
 
     console.log("point", untentPoints);
@@ -165,7 +189,7 @@ const point = function () {
   return untentPoints;
 };
 point();
-
+// funzione bottone selezionato
 const press = document.getElementById("benchmark");
 let pressButton = null;
 const quest = questions[questionNumber];
@@ -173,17 +197,17 @@ const quest = questions[questionNumber];
 const buttonPressed = (e) => {
   if (e.target.nodeName === "LABEL") {
     console.log("butt", e);
-    e.target.classList.add("sel"); // Add .active CSS Class
+    e.target.classList.add("sel");
 
     if (pressButton !== null) {
-      pressButton.classList.remove("sel"); // Remove .active CSS Class
+      pressButton.classList.remove("sel"); 
     }
 
     pressButton = e.target;
   }
 };
 press.addEventListener("click", buttonPressed);
-
+//creo elementi nel benchmark
 const bench = function () {
   const quest = questions[questionNumber];
   console.log(quest);
@@ -223,19 +247,21 @@ const next = function () {
       console.log("final point ", untentPoints);
     } else {
       changeBtn();
+      //timer 4s per andare direttamente nei risultati
       setTimeout(() => {
         window.location.href="result.html"
       }, 4000);
      
     }
-
+    //salvo il punteggio nella localStorage per richiamarla in result
     localStorage.setItem("untentPoints", untentPoints);
 
     console.log(questionNumber);
   });
 };
 next();
-
+// cambio html del bottone next alla fine delle domande 
+//agiungo link a pagina html
 const changeBtn = function () {
   btnNext.innerHTML = `<a class="button" id="link" href="result.html">Result</a>`;
   btnNext.style.textDecoration = "none";
@@ -243,4 +269,4 @@ const changeBtn = function () {
 };
 
 console.log("final point ", untentPoints);
-// result
+//

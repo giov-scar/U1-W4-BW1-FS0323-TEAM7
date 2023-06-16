@@ -1,12 +1,15 @@
 window.onload = function () {
   //  result();
 };
+
+//richiamo i punti da localStorage
 console.log(localStorage);
 let punti = localStorage.getItem("untentPoints");
+// variabile per mostrare le domande sbagliate
 let wrong = questions.length * 10 - punti;
 
 console.log(wrong);
-
+// chart doughnut per grafico risultati
 const chart = function () {
   const ctx = document.getElementById("myChart");
 
@@ -28,6 +31,9 @@ const chart = function () {
   });
 };
 chart();
+
+//scrivo nell'html i risultati con 2 div per posizionarli al lato del grafico
+//primo div con p
 const result = function () {
   const pageResult = document.getElementById("firstP");
 
@@ -37,24 +43,32 @@ const result = function () {
   console.log(pageResult);
 };
 result();
+
+//secondo div con p
 const result2 = function () {
   const pageResult = document.getElementById("secondP");
 
-  pageResult.innerHTML = `<h2> Wrong</h2> <p>${wrong}%</p> <P>${punti/questions.length}/ ${
+  pageResult.innerHTML = `<h2> Wrong</h2> <p>${wrong}%</p> <P>${wrong/questions.length}/ ${
     questions.length
   } questions</p>`;
   console.log(pageResult);
 };
 result2();
+
+
+//scrivo div p al centro del grafico
 const centralP=function(){
+
   const passed=`<h4>Congratulations!</h4> 
   <h4>You passed the exam</h4><br>
   <p>We'll send you the certificate in 
   few minutes.
   Check your email(including promotions / spam folder)</p>`
   const notPassed=`<h4>Oh nooo</h4><h4>You didn't pass the exam! attaccate ar cazzo</h4>`
+
   const centralP=document.getElementById("centralP")
-  if(punti>60){
+  //controllo i punti per far apparire successo o fail dell'quiz
+  if(punti>50){
   centralP.innerHTML=`${passed}`}
   else{
     centralP.innerHTML=`${notPassed}`
